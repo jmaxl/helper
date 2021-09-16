@@ -1,0 +1,28 @@
+{
+    "name": "jmaxl/helper",
+    "description": "My first helper package. Enjoy it.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jmaxl",
+            "email": "juliuslukas@googlemail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Jmaxl\\Helper\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jmaxl\\Helper\\HelperServiceProvider"
+            ]
+        }
+    }
+}
+
