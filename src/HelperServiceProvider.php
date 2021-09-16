@@ -8,13 +8,14 @@ use Illuminate\Support\ServiceProvider;
 class HelperServiceProvider extends ServiceProvider
 {
     public function boot()
-{
-    if (File::exists(__DIR__ . '/helper.php')) {
-        require __DIR__ . '/helper.php';
+    {
+        $this->loadMigrationsFrom(__DIR__ .'/../database/migrations');
+        if (File::exists(__DIR__ . '/helper.php')) {
+            require __DIR__ . '/helper.php';
+        }
     }
-}
 
     public function register()
-{
-}
+    {
+    }
 }
